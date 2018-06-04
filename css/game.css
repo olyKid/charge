@@ -17,11 +17,12 @@ Project from: https://github.com/Hydrosaur/charge
   font-family: sans-serif;
 }
 .endgame {
-    margin-top: 2em;
+    margin-top: 1em;
     border: 2px solid lightgray;
 }
 
 #startbtn {
+    margin-top: 3em;
     border: 2px solid lightgray;
 }
 
@@ -60,7 +61,22 @@ button {
     -ms-transform: scale(-1, 1);
 }
 
-#leftlivesheader {
+.headers {
+    text-align: left;
+    font-size: 1.5em;
+}
+
+#username {
+    font-size: 2em;
+    color: slateblue;
+}
+
+#foename {
+    font-size: 2em;
+    color: firebrick;
+}
+
+/* #leftlivesheader {
   position: absolute;
   top: 0%;
   left: 26.5%;
@@ -82,63 +98,60 @@ button {
   position: absolute;
   top: 0%;
   right: 9%;
-}
+} */
 
 #leftlives {
-    position: absolute;
+    
     width: 15%;
     height: 30px;
     background-color: tomato;
-    top: 7%;
+    /* top: 7%;
     left: 22%;
+    position: absolute; */
 }
 #leftbar {
-    position: absolute;
     width: 1%;
     height: 100%;
     background-color: green;
 }
 
 #rightlives {
-    position: absolute;
     width: 15%;
     height: 30px;
     background-color: tomato;
-    top: 7%;
+    /* top: 7%;
     left: 62.5%;
+    position: absolute; */
 }
 #rightbar {
-    position: absolute;
     width: 1%;
     height: 100%;
     background-color: green;
 }
 
 #leftcharge {
-    position: absolute;
     width: 20%;
     height: 30px;
     background-color: grey;
-    top: 7%;
+    /* top: 7%;
     left: 1%;
+    position: absolute; */
 }
 #chargeleftbar {
-    position: absolute;
     width: 1%;
     height: 100%;
     background-color: yellow;
 }
 
 #rightcharge {
-    position: absolute;
     width: 20%;
     height: 30px;
     background-color: grey;
-    top: 7%;
+    /* top: 7%;
     left: 78.5%;
+    position: absolute; */
 }
 #chargerightbar {
-    position: absolute;
     width: 1%;
     height: 100%;
     background-color: yellow;

@@ -21,10 +21,16 @@ Project from: https://github.com/Hydrosaur/charge
 	</head>
 	<body>
 		<div class="container">
-				<h1 id="title">Charge!</h1>
-				<button onclick="start();" id="startbtn">Start!</button>
-				<div id="user">
-						<h2 id="username" class=""></h2>
+			<div class="row">
+				<div class="col-sm-12">
+						<h1 id="title">Charge!</h1>
+				</div>
+			</div>
+			<button onclick="start();" id="startbtn">Start!</button>
+			<div class="row">
+				<div id="user" class="col-sm-3">
+					
+						<h2 id="username" class="headers"></h2>
 						<h3 id="leftlivesheader" class="headers">Health:</h3>
 						<div id="leftlives" class="bar">
 							<div id="leftbar"></div>
@@ -34,8 +40,19 @@ Project from: https://github.com/Hydrosaur/charge
 							<div id="chargeleftbar"></div>
 						</div>
 				</div>
-				
-				<div id="foe">
+				<div id="mid" class="col-sm-6">
+						<h5 id="comment"></h5><br>
+						<div id="battle">
+							<div class="popup">
+								<img src="" width="" id="leftplayer" >
+								<span class="popuptext" id="gametips">I can't attack if I dont have any charge!</span>
+							</div>
+							<img src="" width="" id="rightplayer" class="flipped">
+						</div>
+						<h4 class="gui"></h4>
+						<h4 class="text"></h4>
+				</div>
+				<div id="foe" class="col-sm-3">
 						<h2 id="foename" class="headers"></h2>
 						<h3 id="rightlivesheader" class="headers">Health:</h3>
 						<div id="rightlives" class="bar">
@@ -46,17 +63,7 @@ Project from: https://github.com/Hydrosaur/charge
 							<div id="chargerightbar"></div>
 						</div>
 				</div>
-				
-				<h5 id="comment"></h5><br>
-				<div id="battle">
-					<div class="popup">
-						<img src="" width="" id="leftplayer" >
-						<span class="popuptext" id="gametips">I can't attack if I dont have any charge!</span>
-					</div>
-					<img src="" width="" id="rightplayer" class="flipped">
-				</div>
-				<h4 class="gui"></h4>
-				<h4 class="text"></h4>
+			</div>
 		</div>
 	</body>
 	<script src="js/game.js"></script>
