@@ -7,18 +7,22 @@ Week 9
 Project from: https://github.com/Hydrosaur/charge
 */
 
-/* body {
+.container {
   text-align: center;
-} */
+}
 
 #title {
   margin: 0 auto;
   text-align: center;
   font-family: sans-serif;
 }
+.endgame {
+    margin-top: 2em;
+    border: 2px solid lightgray;
+}
 
-#startbtn{
-  border: 2px solid lightgray;
+#startbtn {
+    border: 2px solid lightgray;
 }
 
 h1,h4,h3,h5 {
