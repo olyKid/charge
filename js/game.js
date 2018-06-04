@@ -17,7 +17,7 @@ var clientuser = 'Unknown Hero'; // Changed default username
 var CPULives = 3;
 var turns = 0;
 var cpumove = moves[Math.floor((Math.random() * 3) + 0)];
-var foe = 'ARealPerson';
+var foe = 'Procrastination';
 var blockingsize = '230';
 var attackingsize = '600';
 var chargingsize = '130';
@@ -34,13 +34,15 @@ $("#chargerightbar").css("width", (CPUCharge * 25) + '%');
 function start() {
   clientuser = prompt("Username:");
   gui();
+  $("#username").text(clientuser); // add user name to health bar
+  $("#foename").text(foe); // add foe name to health bar
   $("#startbtn").css("display", "none");
 }
 
 function gui(){
   $("#leftplayer").attr("src", "img/stay.PNG").attr("width", staysize);
   $("#rightplayer").attr("src", "img/stay.PNG").attr("width", staysize);
-  $(".gui").append("<div id='movepick'><h3>What move are you going to use?<br></h3><button onclick='charge();'><img src='img/electric.png' class='icon'></button><button onclick='attack();'><img src='../charge/img/dualsword.png' class='icon'></button><button onclick='block();'><img src='../charge/img/shield.png' class='icon'></button><br><button onclick='endgame();'>End Game</button></div><br class='end'>");
+  $(".gui").append("<div id='movepick'><h3>What move are you going to use?<br></h3><button onclick='charge();'><img src='img/electric.png' class='icon'></button><button onclick='attack();'><img src='img/dualsword.png' class='icon'></button><button onclick='block();'><img src='img/shield.png' class='icon'></button><br><button onclick='endgame();'>End Game</button></div><br class='end'>");
   $(".bar").css("display", "block");
   $(".headers").css("display", "block");
 }

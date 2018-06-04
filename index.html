@@ -9,45 +9,57 @@ Week 9
 Project from: https://github.com/Hydrosaur/charge
 -->
 
-<html>
-<head>
-	<title>Charge!</title>
-	<link href="css/game.css" rel="stylesheet" type="text/css">
+<html lang="en">
+	<head>
+		<title>Charge!</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/game.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+				<h1 id="title">Charge!</h1><br>
+				<button onclick="start();" id="startbtn">Start!</button><br>
+				<div id="user">
+						<h2 id="username" class="headers"></h2>
+						<h3 id="leftlivesheader" class="headers">Health:</h3>
+						<div id="leftlives" class="bar">
+							<div id="leftbar"></div>
+						</div>
+						<h3 id="leftchargeheader" class="headers">Charge:</h3>
+						<div id="leftcharge" class="bar">
+							<div id="chargeleftbar"></div>
+						</div>
+				</div>
+				
+				<div id="foe">
+						<h2 id="foename" class="headers"></h2>
+						<h3 id="rightlivesheader" class="headers">Health:</h3>
+						<div id="rightlives" class="bar">
+							<div id="rightbar"></div>
+						</div>		
+						<h3 id="rightchargeheader" class="headers">Charge:</h3>
+						<div id="rightcharge" class="bar">
+							<div id="chargerightbar"></div>
+						</div>
+				</div>
+				
+				<h5 id="comment"></h5><br>
+				<div id="battle">
+					<div class="popup">
+						<img src="" width="" id="leftplayer" >
+						<span class="popuptext" id="gametips">I can't attack if I dont have any charge!</span>
+					</div>
+					<img src="" width="" id="rightplayer" class="flipped">
+				</div>
+				<h4 class="gui"></h4>
+				<h4 class="text"></h4>
+		</div>
+	</body>
+	<footer>
 
-  <!-- Add bootstrap and updated jquery scripts-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<h1 id="title">Charge!</h1><br>
-	<button onclick="start();" id="startbtn">Start!</button><br>
-	<h3 id="leftlivesheader" class="headers">Health:</h3>
-	<div id="leftlives" class="bar">
-  	<div id="leftbar"></div>
-	</div>
-	<h3 id="rightlivesheader" class="headers">Health:</h3>
-	<div id="rightlives" class="bar">
-  	<div id="rightbar"></div>
-	</div>
-	<h3 id="leftchargeheader" class="headers">Charge:</h3>
-	<div id="leftcharge" class="bar">
-  	<div id="chargeleftbar"></div>
-	</div>
-	<h3 id="rightchargeheader" class="headers">Charge:</h3>
-	<div id="rightcharge" class="bar">
-  	<div id="chargerightbar"></div>
-	</div>
-	<h5 id="comment"></h5><br>
-<div id="battle">
-	<div class="popup">
-		<img src="" width="" id="leftplayer" >
-  	<span class="popuptext" id="gametips">I can't attack if I dont have any charge!</span>
-	</div>
-		<img src="" width="" id="rightplayer" class="flipped">
-</div>
-	<h4 class="gui"></h4>
-	<h4 class="text"></h4>
-</body>
-<script src="js/game.js"></script>
+	</footer>
+	<script src="js/game.js"></script>
 </html>
