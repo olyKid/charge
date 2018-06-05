@@ -20,7 +20,7 @@ var turns = 0;
 var cpumove = moves[Math.floor((Math.random() * 3) + 0)];
 var foe = 'Procrastination';
 var blockingsize = '230';
-var attackingsize = '430';
+var attackingsize = '230';
 var chargingsize = '130';
 var staysize = '130';
 var hitsize = '230';
@@ -58,8 +58,8 @@ function gui(){
 }
 
 function turnWrapup() {
-  $("#leftbar").css("width", (userLives * 33 + 1) + '%');
-  $("#rightbar").css("width", (CPULives * 33 + 1) + '%');
+  $("#leftbar").css("width", (userLives * 33.3) + '%');
+  $("#rightbar").css("width", (CPULives * 33.3) + '%');
   $("#chargeleftbar").css("width", (userCharge * 25) + '%');
   $("#chargerightbar").css("width", (CPUCharge * 25) + '%');
   turns++;
@@ -88,7 +88,7 @@ function resumeGame(){
     } else {
       cpumove = 'Charg';
     }
-    $("#comment").html("<h3 id='comment'>"+ foe +" was "+ cpumove +"ing while you were "+ usermove +"ing</h3><br class='end'>");
+    $("#comment").html("<h3 id='comment'>"+ foe +" was "+ cpumove +"ing while " + username +  " was "+ usermove +"ing</h3><br class='end'>");
     console.log("Text Replaced");
 
     // Speed up game play by decreasing waittime from 3500 to 2000
@@ -176,13 +176,13 @@ function resumeGame(){
              $("body").append("<h1>"+ foe + " wins!</h1>");
              setTimeout(opWin, waittime);
              $("#leftplayer").attr("src", "").attr("width", "0");
-             $("#leftplayer").attr("src", "img/dead.PNG").attr("width", "300");
+             $("#leftplayer").attr("src", "img/dead.PNG").attr("width", "200");
         } else if(CPULives < 1){
              $("h4,table,.end").remove();
              $("body").append("<h1><b>"+ username + " wins!</b></h1>");
              setTimeout(userWin, waittime);
              $("#rightplayer").attr("src", "").attr("width", "0");
-             $("#rightplayer").attr("src", "img/dead.PNG").attr("width", "300");
+             $("#rightplayer").attr("src", "img/dead.PNG").attr("width", "200");
         } else {
             $("#movepick").remove();
             setTimeout(gui, waittime);
@@ -205,12 +205,12 @@ function gametip() {
 
 function userWin(){
   $("#leftplayer").attr("src", "").attr("width", "0");
-  $("#leftplayer").attr("src", "img/win.gif").attr("width", "300");
+  $("#leftplayer").attr("src", "img/win.gif").attr("width", "200");
 }
 
 function opWin(){
   $("#rightplayer").attr("src", "").attr("width", "0");
-  $("#rightplayer").attr("src", "img/win.gif").attr("width", "300");
+  $("#rightplayer").attr("src", "img/win.gif").attr("width", "200");
 }
 
 function reloadConsole() {
