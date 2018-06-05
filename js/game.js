@@ -14,26 +14,28 @@ var userCharge = 0;
 var CPUCharge = 0;
 var userLives = 3;
 var clientuser;
-var username = 'Unknown Hero'; // Changed default username
+var username = 'UnknownHero'; // Changed default username
 var CPULives = 3;
 var turns = 0;
 var cpumove = moves[Math.floor((Math.random() * 3) + 0)];
 var foe = 'Procrastination';
 var blockingsize = '230';
-var attackingsize = '600';
+var attackingsize = '430';
 var chargingsize = '130';
-var staysize = '120';
-var hitsize = '330';
+var staysize = '130';
+var hitsize = '230';
 
 $(".bar").css("display", "none");
 $(".headers").css("display", "none");
-$("#leftbar").css("width", (userLives * 33 + 1) + '%');
+$("#leftbar").css("style","width: " + (userLives * 33 + 1) + '%');
 $("#rightbar").css("width", (CPULives * 33 + 1) + '%');
 $("#chargeleftbar").css("width", (userCharge * 25) + '%');
 $("#chargerightbar").css("width", (CPUCharge * 25) + '%');
 
 function start() {
   clientuser = prompt("Username:");
+
+  // set username
   if (clientuser != null && clientuser != "") {
     username = clientuser
   };
@@ -41,6 +43,9 @@ function start() {
   $("#username").text(username); // add user name to health bar
   $("#foename").text(foe); // add foe name to health bar
   $("#startbtn").css("display", "none");
+  $("#foe").append("<h3 id='rightlivesheader' class='headers'>Health:</h3><div class='progress' id='lives'><div class='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%' id='rightbar'></div></div><h3 id='rightchargeheader' class='headers'>Charge:</h3><div class='progress' id='charge'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%' id='chargerightbar'></div></div>")
+  $("#user").append("<h3 id='leftlivesheader' class='headers'>Health:</h3><div class='progress' id='lives'><div class='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%' id='leftbar'></div></div><h3 id='rightleftheader' class='headers'>Charge:</h3><div class='progress' id='charge'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%' id='chargeleftbar'></div></div>")
+ 
 }
 
 function gui(){
@@ -49,6 +54,7 @@ function gui(){
   $(".gui").append("<div id='movepick'><h3>What move are you going to use?<br></h3><button onclick='charge();'><img src='img/electric.png' class='icon'></button><button onclick='attack();'><img src='img/dualsword.png' class='icon'></button><button onclick='block();'><img src='img/shield.png' class='icon'></button><br><button class='endgame' onclick='endgame();'>End Game</button></div><br class='end'>");
   $(".bar").css("display", "block");
   $(".headers").css("display", "block");
+  
 }
 
 function turnWrapup() {
@@ -173,7 +179,7 @@ function resumeGame(){
              $("#leftplayer").attr("src", "img/dead.PNG").attr("width", "300");
         } else if(CPULives < 1){
              $("h4,table,.end").remove();
-             $("body").append("<h1><b>"+ clientuser + " wins!</b></h1>");
+             $("body").append("<h1><b>"+ username + " wins!</b></h1>");
              setTimeout(userWin, waittime);
              $("#rightplayer").attr("src", "").attr("width", "0");
              $("#rightplayer").attr("src", "img/dead.PNG").attr("width", "300");
