@@ -25,13 +25,6 @@ var chargingsize = '130';
 var staysize = '130';
 var hitsize = '230';
 
-$(".bar").css("display", "none");
-$(".headers").css("display", "none");
-$("#leftbar").css("style","width: " + (userLives * 33 + 1) + '%');
-$("#rightbar").css("width", (CPULives * 33 + 1) + '%');
-$("#chargeleftbar").css("width", (userCharge * 25) + '%');
-$("#chargerightbar").css("width", (CPUCharge * 25) + '%');
-
 function start() {
   clientuser = prompt("Username:");
 
@@ -43,6 +36,8 @@ function start() {
   $("#username").text(username); // add user name to health bar
   $("#foename").text(foe); // add foe name to health bar
   $("#startbtn").css("display", "none");
+
+  // add foe and user elements
   $("#foe").append("<h5 id='rightlivesheader' class='headers'>Health:</h5><div class='progress' id='lives'><div class='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%' id='rightbar'></div></div><h5 id='rightchargeheader' class='headers'>Charge:</h5><div class='progress' id='charge'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%' id='chargerightbar'></div></div>");
   $("#user").append("<h5 id='leftlivesheader' class='headers'>Health:</h5><div class='progress' id='lives'><div class='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%' id='leftbar'></div></div><h5 id='leftchargeheader' class='headers'>Charge:</h5><div class='progress' id='charge'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%' id='chargeleftbar'></div></div>");
 }
@@ -77,10 +72,6 @@ function attack() {
 }
 function block() {
   usermove = "Block";
-  resumeGame();
-}
-function endgame() {
-  usermove = "stop";
   resumeGame();
 }
 
@@ -167,9 +158,7 @@ function resumeGame(){
       }
     }
     turnWrapup();
-    if(usermove == "stop"){
-        $("h4,table,.end").remove();
-    } else if(userLives < 1 && CPULives < 1){
+    if (userLives < 1 && CPULives < 1){
       $("h4,table,.end").remove();
       $("#playarea").append("<div class='endtext' id='endtie'><h1>It's A Tie!</h1></div>");
       $(".endarea").css("visibility", "visible");
