@@ -23,6 +23,11 @@ Project from: https://github.com/Hydrosaur/charge
     color: cyan;
 }
 
+.endarea {
+    margin-top: 1em;
+    visibility: hidden;
+}
+
 #enduser {
     color: blue;
 }
@@ -31,13 +36,12 @@ Project from: https://github.com/Hydrosaur/charge
     color: red;
 }
 
-.endgame {
-    margin-top: 1em;
-    border: 2px solid lightgray;
-}
-
 .endtext {
     font-family: Verdana;
+}
+
+#restartbtn {
+    border: 2px solid lightgray;
 }
 
 #startbtn {
@@ -45,7 +49,7 @@ Project from: https://github.com/Hydrosaur/charge
     border: 2px solid lightgray;
 }
 
-#startbtn:hover {
+#restartbtn:hover, #replaybtn:hover, #startbtn:hover {
     background-color:lightgray;
 }
 
