@@ -49,7 +49,7 @@ Project from: https://github.com/Hydrosaur/charge
     border: 2px solid lightgray;
 }
 
-#restartbtn:hover, #replaybtn:hover, #startbtn:hover {
+#restartbtn:hover, #startbtn:hover {
     background-color:lightgray;
 }
 

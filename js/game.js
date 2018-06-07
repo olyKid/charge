@@ -183,7 +183,7 @@ function resumeGame(){
              $(".endarea").css("visibility", "visible");
         } else if(CPULives < 1){
              $("h4,table,.end").remove();
-             $("#playarea").append("<div class='endtext' id='enduser'><h1><b>"+ username + " Wins!</b></h1></div>");
+             $("#playarea").append("<div class='endtext' id='enduser'><h1>"+ username + " Wins!</h1></div>");
              setTimeout(userWin, waittime);
              $("#rightplayer").attr("src", "").attr("width", "0");
              $("#rightplayer").attr("src", "img/dead.PNG").attr("width", "200");
