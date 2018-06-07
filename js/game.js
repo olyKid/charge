@@ -43,15 +43,15 @@ function start() {
   $("#username").text(username); // add user name to health bar
   $("#foename").text(foe); // add foe name to health bar
   $("#startbtn").css("display", "none");
-  $("#foe").append("<h3 id='rightlivesheader' class='headers'>Health:</h3><div class='progress' id='lives'><div class='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%' id='rightbar'></div></div><h3 id='rightchargeheader' class='headers'>Charge:</h3><div class='progress' id='charge'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%' id='chargerightbar'></div></div>")
-  $("#user").append("<h3 id='leftlivesheader' class='headers'>Health:</h3><div class='progress' id='lives'><div class='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%' id='leftbar'></div></div><h3 id='rightleftheader' class='headers'>Charge:</h3><div class='progress' id='charge'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%' id='chargeleftbar'></div></div>")
+  $("#foe").append("<h5 id='rightlivesheader' class='headers'>Health:</h5><div class='progress' id='lives'><div class='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%' id='rightbar'></div></div><h5 id='rightchargeheader' class='headers'>Charge:</h5><div class='progress' id='charge'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%' id='chargerightbar'></div></div>")
+  $("#user").append("<h5 id='leftlivesheader' class='headers'>Health:</h5><div class='progress' id='lives'><div class='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%' id='leftbar'></div></div><h5 id='rightleftheader' class='headers'>Charge:</h5><div class='progress' id='charge'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%' id='chargeleftbar'></div></div>")
  
 }
 
 function gui(){
   $("#leftplayer").attr("src", "img/stay.PNG").attr("width", staysize);
   $("#rightplayer").attr("src", "img/stay.PNG").attr("width", staysize);
-  $(".gui").append("<div id='movepick'><h3>What move are you going to use?<br></h3><button onclick='charge();'><img src='img/electric.png' class='icon'></button><button onclick='attack();'><img src='img/dualsword.png' class='icon'></button><button onclick='block();'><img src='img/shield.png' class='icon'></button><br><button class='endgame' onclick='endgame();'>End Game</button></div><br class='end'>");
+  $(".gui").append("<div id='movepick'><h3>What move are you going to use?<br></h3><button onclick='charge();'><img src='img/electric.png' class='icon'></button><button onclick='attack();'><img src='img/dualsword.png' class='icon'></button><button onclick='block();'><img src='img/shield.png' class='icon'>");
   $(".bar").css("display", "block");
   $(".headers").css("display", "block");
   

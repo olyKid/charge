@@ -12,14 +12,23 @@ body {
 }
 
 .container {
-  text-align: center;
+    text-align: center;
+}
+
+#titlebar {
+    background-color: #555;
 }
 
 #title {
-  margin: 1em auto;
-  text-align: center;
-  font-family: sans-serif;
+    margin: .25em auto;
+    font-size: 2.5em;
+    text-align: center;
+    font-family: sans-serif;
+    color: cyan;
 }
+
+
+
 .endgame {
     margin-top: 1em;
     border: 2px solid lightgray;
@@ -45,7 +54,7 @@ th, td {
 
 button {
   background-color: white;
-  font-size: 30px;
+  font-size: 2em;
   border-style: none;
   cursor: pointer;
 }
@@ -71,16 +80,25 @@ button {
 
 .headers {
     text-align: left;
-    font-size: 1em;
 }
 
+#comment {
+    font-size: 1em;
+}
+/* 
+#user {
+    display: block
+}
+
+#foe {
+    display: block
+}
+ */
 #username {
-    font-size: 2em;
     color: slateblue;
 }
 
 #foename {
-    font-size: 2em;
     color: firebrick;
 }
 
