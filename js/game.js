@@ -161,7 +161,7 @@ function resumeGame(){
     if (userLives < 1 && CPULives < 1){
       $("h4,table,.end").remove();
       $("#playarea").append("<div class='endtext' id='endtie'><h1>It's A Tie!</h1></div>");
-      $(".endarea").css("visibility", "visible");
+      $(".endarea").css("visibility", "visible"); // makes restart button visible
     } else {
         if(userLives < 1){
              $("h4,table,.end").remove();
@@ -169,14 +169,14 @@ function resumeGame(){
              setTimeout(opWin, waittime);
              $("#leftplayer").attr("src", "").attr("width", "0");
              $("#leftplayer").attr("src", "img/dead.PNG").attr("width", "200");
-             $(".endarea").css("visibility", "visible");
+             $(".endarea").css("visibility", "visible");  // makes restart button visible
         } else if(CPULives < 1){
              $("h4,table,.end").remove();
              $("#playarea").append("<div class='endtext' id='enduser'><h1>"+ username + " Wins!</h1></div>");
              setTimeout(userWin, waittime);
              $("#rightplayer").attr("src", "").attr("width", "0");
              $("#rightplayer").attr("src", "img/dead.PNG").attr("width", "200");
-             $(".endarea").css("visibility", "visible");
+             $(".endarea").css("visibility", "visible"); // makes restart button visible
         } else {
             $("#movepick").remove();
             setTimeout(gui, waittime);
