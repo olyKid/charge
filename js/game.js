@@ -42,7 +42,7 @@ function start() {
   $("#user").append("<h5 id='leftlivesheader' class='headers'>Health:</h5><div class='progress' id='lives'><div class='progress-bar' role='progressbar' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100' style='width: 100%' id='leftbar'></div></div><h5 id='leftchargeheader' class='headers'>Charge:</h5><div class='progress' id='charge'><div class='progress-bar' role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100' style='width: 0%' id='chargeleftbar'></div></div>");
 }
 
-// function to generate random enemy names
+// function to generate random enemy names from https://www.generatedata.com/
 function generateEnemyName() {
   var a = ["xX", "xx"];
   var b = ["Dara", "Barrett", "Patience", "Dalton", "Quincy", "Davis", "Jack", "Oren", "Xander", "Yoshio", "Zia", "Jeanette", "Lionel", "Griffin", "Pascale", "Casey", "Jacqueline", "Charde",
