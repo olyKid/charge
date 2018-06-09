@@ -2,9 +2,9 @@
 Michael Owen & Durias Thomas
 Spring 2018
 cis 269
-Team Project
 Week 9
-Project from: https://github.com/Hydrosaur/charge
+Team Project Git: https://github.com/olyKid/charge
+Project idea from: https://github.com/Hydrosaur/charge
 */
 
 var stop = false;
