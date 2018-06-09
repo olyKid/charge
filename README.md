@@ -1,9 +1,7 @@
 # Team Project: Charge!
 ### Michael Owen & Durias Thomas
 ### Spring 2018
-### cis 269
-### Week 9
-### Team Project Git: https://github.com/olyKid/charge
+### CIS 269
 ### Project idea from: https://github.com/Hydrosaur/charge
 <hr>
 
